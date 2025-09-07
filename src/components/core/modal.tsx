@@ -1,0 +1,136 @@
+"use client";
+
+import { Dialog, Transition } from "@headlessui/react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { FC, Fragment } from "react";
+import { FaTimes } from "react-icons/fa";
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+interface ButtonProps {
+    className?: string;
+    onClose: any;
+    isOpen: boolean;
+    menu: any;
+}
+
+export const ModalMenuLeft: FC<ButtonProps> = ({
+    menu, onClose, isOpen
+}) => {
+
+    const router = useRouter();
+
+    const handleHome = () => {
+        router.push('/home');
+    }
+
+    return (
+        <Transition appear as={Fragment} show={isOpen}>
+            <Dialog
+                as="div"
+                className="fixed h-full w-full inset-0 z-50 overflow-hidden ml-auto bg-gradient-to-r from-transparent to-stone-700"
+                onClose={onClose}
+            >
+                <div className="h-full text-center flex justify-start">
+                    <Transition.Child
+                        as={Fragment}
+                        enter="transition ease duration-700 transform"
+                        enterFrom="opacity-0 -translate-x-full"
+                        enterTo="opacity-100 translate-x-0"
+                        leave="transition ease duration-1000 transform"
+                        leaveFrom="opacity-100 translate-x-0"
+                        leaveTo="opacity-0 -translate-x-full"
+                    >
+                        <div
+                            className="h-full w-full overflow-hidden text-left z-20 py-5 items-center
+                align-middle transition-all transform bg-white shadow-xl flex flex-col"
+                        >
+                            <button className="block mx-2 px-2 py-1 cursor-pointer" onClick={() => handleHome()}>
+                                <p className="italic hidden">Welcome!</p>
+                                <p className="text-stone-900">Logo</p>
+                            </button>
+
+                            {
+                                menu
+                                    ? menu[0].links.map((value: any) => (
+                                        <Link
+                                            className={`w-full py-5 text-base font-bold text-stone-900 decoration-teal-500 underline-offset-8 hover:border-r-4 text-center`}
+                                            key={value.name}
+                                            href={value.url ?? value.link}
+                                        >
+                                            {/* <i className={`${value.icon} w-14 text-2xl`} /> */}
+                                            <span className="">{value.name}</span>
+                                        </Link>
+                                    ))
+                                    : <></>
+                            }
+                        </div>
+                    </Transition.Child>
+                </div>
+            </Dialog>
+        </Transition>
+    );
+};
+
+export const ModalMenuRight: FC<ButtonProps> = ({
+    menu, onClose, isOpen
+}) => {
+
+    const router = useRouter();
+
+    const handleHome = () => {
+        router.push('/home');
+    }
+
+    return (
+        <Transition appear as={Fragment} show={isOpen}>
+            <Dialog
+                as="div"
+                className="fixed h-full w-full inset-0 z-50 overflow-hidden ml-auto bg-gradient-to-r from-transparent to-stone-700"
+                onClose={onClose}
+            >
+                <div className="h-full text-center flex justify-end">
+                    <Transition.Child
+                        as={Fragment}
+                        enter="transition ease duration-700 transform"
+                        enterFrom="opacity-0 translate-x-full"
+                        enterTo="opacity-100 translate-x-0"
+                        leave="transition ease duration-1000 transform"
+                        leaveFrom="opacity-100 translate-x-0"
+                        leaveTo="opacity-0 translate-x-full"
+                    >
+                        <div
+                            className="h-full w-72 overflow-hidden text-left z-20 py-5 items-center
+            align-middle transition-all transform bg-white shadow-xl flex flex-col relative"
+                        >
+                            <button className="block mx-2 px-2 py-1 cursor-pointer" onClick={() => handleHome()}>
+                                <p className="italic hidden">Welcome!</p>
+                                <p className="text-stone-900">Logo</p>
+                            </button>
+
+                            <button className="absolute top-0 right-0 block mx-2 mt-6 px-2 py-2 cursor-pointer" onClick={onClose}>
+                                <FaTimes className={`text-lg text-stone-700`} />
+                            </button>
+
+                            {
+                                menu
+                                    ? menu[0].links.map((value: any) => (
+                                        <Link
+                                            className={`w-full py-5 text-base font-bold text-stone-900 decoration-teal-500 underline-offset-8 hover:border-r-4 text-center`}
+                                            key={value.name}
+                                            href={value.url ?? value.link}
+                                        >
+                                            {/* <i className={`${value.icon} w-14 text-2xl`} /> */}
+                                            <span className="">{value.name}</span>
+                                        </Link>
+                                    ))
+                                    : <></>
+                            }
+                        </div>
+                    </Transition.Child>
+                </div>
+            </Dialog>
+        </Transition>
+    );
+};

@@ -23,4 +23,52 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+main {
+  height: 100%;
+}
+
+.chibi-spin {
+  position: relative;
+  width: 75px;
+  height: auto;
+}
+
+.chibi-spin img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75px;
+  height: auto;
+  transform-origin: center;
+}
+
+/* Front image */
+.front {
+  animation: spinFront 1.5s linear infinite;
+}
+
+/* Back image */
+.back {
+  animation: spinBack 1.5s linear infinite;
+}
+
+/* Front cycle */
+@keyframes spinFront {
+  0%   { transform: scaleX(1); }   /* full */
+  25%  { transform: scaleX(0); }   /* shrink away */
+  50%  { transform: scaleX(0); }   /* stay hidden while back works */
+  75%  { transform: scaleX(0); }   /* grow back */
+  100% { transform: scaleX(1); }   /* hold full */
+}
+
+/* Back cycle */
+@keyframes spinBack {
+  0%   { transform: scaleX(0); }   /* hidden */
+  25%  { transform: scaleX(0); }   /* wait for front to finish */
+  50%  { transform: scaleX(1); }   /* grow in */
+  75%  { transform: scaleX(0); }   /* shrink out */
+  100% { transform: scaleX(0); }   /* stay hidden */
 }
