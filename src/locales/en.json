@@ -1,4 +1,6 @@
 {
     "welcome": "Welcome",
-    "logout": "Logout"
+    "logout": "Logout",
+    "metaTitle": "Developer Portfolio",
+    "metaDesc": "Charles Bon Chua: Full Stack Developer"
 }

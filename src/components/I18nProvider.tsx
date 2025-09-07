@@ -18,7 +18,7 @@ export function I18nProvider({ locale, resources, children }: Props) {
       .use(initReactI18next)
       .init({
         lng: locale,
-        fallbackLng: "en",
+        fallbackLng: "ja",
         resources,
         interpolation: { escapeValue: false },
       });

@@ -1,21 +1,41 @@
-import { MyLoadingAvatarScreen } from "@/components/my_loading_avatar"
-import { MetaInfo } from "@/constants/meta_info"
-import { Metadata } from "next"
+import { Navbar } from "@/components/core/navbar";
+import { MetaInfo } from "@/constants/meta_info";
+import { Locale } from "@/lib/i18n/config";
+import { getDictionary } from "@/lib/i18n/getDictionary";
+import { Metadata } from "next";
 
-export const metadata: Metadata = {
-    openGraph: {
-        title: `${MetaInfo.og.title} | Test`,
-        description: MetaInfo.og.description,
-        images: [
-            {
-                url: MetaInfo.og.image,
-            },
-        ],
-    },
+type Props = {
+    params: Promise<{ lang: string }>
 }
 
-export default function Test() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const currentParams = await params;
+    const dict = await getDictionary(currentParams.lang as Locale);
+    return {
+        title: `${dict.metaTitle} | Test`,         // localized <title>
+        description: `${dict.metaDesc} | Test Page Description`, // localized description
+        openGraph: {
+            title: `${dict.metaTitle} | Test`,         // localized <title>
+            description: `${dict.metaDesc} | Test Page Description`, // localized description
+            images: [
+                {
+                    url: MetaInfo.og.image
+                }
+            ]
+        }
+    };
+}
+
+export default async function Page({ params }: { params: { lang: Locale } }) {
+    const currentParams = await params;
+    const dict = await getDictionary(currentParams.lang);
     return (
-        <MyLoadingAvatarScreen/>
-    )
+        <>
+            <Navbar />
+            <div style={{ padding: 24 }}>
+                <p>{dict.welcome}</p>
+                <p>Test</p>
+            </div>
+        </>
+    );
 }

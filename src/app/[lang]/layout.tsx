@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/core/navbar";
 import { I18nProvider } from "@/components/I18nProvider";
 import { i18nConfig, Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/getDictionary";
@@ -23,7 +22,6 @@ export default async function LanguageRootLayout({
                 locale={lang}
                 resources={{ [lang]: { translation: dict } }}
             >
-                <Navbar />
                 {children}
             </I18nProvider>
         </main>
