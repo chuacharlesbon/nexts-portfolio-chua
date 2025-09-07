@@ -12,11 +12,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const currentParams = await params;
     const dict = await getDictionary(currentParams.lang as Locale);
     return {
-        title: `${dict.metaTitle} | Test`,         // localized <title>
-        description: `${dict.metaDesc} | Test Page Description`, // localized description
+        title: `${dict.metaTitle} | Contact Us`,         // localized <title>
+        description: `${dict.metaDesc} | Contact Us Page Description`, // localized description
         openGraph: {
-            title: `${dict.metaTitle} | Test`,         // localized <title>
-            description: `${dict.metaDesc} | Test Page Description`, // localized description
+            title: `${dict.metaTitle} | Contact Us`,         // localized <title>
+            description: `${dict.metaDesc} | Contact Us Page Description`, // localized description
             images: [
                 {
                     url: MetaInfo.og.image
@@ -34,7 +34,7 @@ export default async function Page({ params }: { params: { lang: Locale } }) {
             <Navbar dict={dict} locale={currentParams.lang} />
             <div style={{ padding: 24 }}>
                 <p>{dict.welcome}</p>
-                <p>Test</p>
+                <p>Contact Us</p>
             </div>
         </>
     );

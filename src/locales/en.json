@@ -2,5 +2,9 @@
     "welcome": "Welcome",
     "logout": "Logout",
     "metaTitle": "Developer Portfolio",
-    "metaDesc": "Charles Bon Chua: Full Stack Developer"
+    "metaDesc": "Charles Bon Chua: Full Stack Developer",
+    "home": "HOME",
+    "about": "ABOUT",
+    "contactUs": "CONTACT US",
+    "explore": "EXPLORE"
 }

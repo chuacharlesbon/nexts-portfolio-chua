@@ -30,6 +30,12 @@ main {
   height: 100%;
 }
 
+h1, h2, h3 {
+  font-family: var(--font-oswald);
+  text-transform: uppercase;
+  letter-spacing: 0.05em; /* adds breathing space */
+}
+
 .chibi-spin {
   position: relative;
   width: 75px;

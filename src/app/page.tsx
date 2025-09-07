@@ -9,7 +9,7 @@ export default function Home() {
   const router = useRouter();
   useEffect(() => {
     setTimeout(() => {
-      router.replace('/ja/test');
+      router.replace('/ja');
     }, 1000)
   }, [])
   

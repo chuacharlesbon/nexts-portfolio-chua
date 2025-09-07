@@ -16,7 +16,7 @@ export default function LanguageSwitcher() {
 
     return (
         <Link href={newPath}>
-            <button>
+            <button className="text-stone-900 text-sm">
                 {otherLocale === "en" ? "English" : "日本語"}
             </button>
         </Link>

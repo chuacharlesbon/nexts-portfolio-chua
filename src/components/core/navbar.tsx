@@ -7,6 +7,8 @@ import { ModalMenuLeft, ModalMenuRight } from "./modal";
 import { IoMdMenu } from "react-icons/io";
 import { Menu } from "@/constants/menu";
 import { IoArrowBackOutline } from "react-icons/io5";
+import Link from "next/link";
+import LanguageSwitcher from "./language_button";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
@@ -15,9 +17,11 @@ interface DataProps {
     menu?: any;
     sideMenu?: any;
     navbarClass?: string;
+    dict: Record<string, string>;
+    locale: string;
 }
 
-export const Navbar: FC<DataProps> = ({ location, menu, sideMenu, navbarClass }) => {
+export const Navbar: FC<DataProps> = ({ location, menu, sideMenu, navbarClass, dict, locale }) => {
 
     const router = useRouter();
     const pathname = usePathname();
@@ -30,7 +34,7 @@ export const Navbar: FC<DataProps> = ({ location, menu, sideMenu, navbarClass })
 
     return (
         <>
-            <nav className={navbarClass ?? "sticky top-0 bg-white relative z-50"}>
+            <nav className={navbarClass ?? "sticky top-0 bg-white relative z-50 p-2"}>
                 <ModalMenuLeft
                     onClose={() => setMenuLeftOpen(false)}
                     isOpen={isMenuLeftOpen}
@@ -46,7 +50,7 @@ export const Navbar: FC<DataProps> = ({ location, menu, sideMenu, navbarClass })
                         }
                     ]}
                 />
-                <div className="absolute top-0 left-0 h-20 flex flex-col justify-center items-center">
+                {/* <div className="absolute top-0 left-0 h-20 flex flex-col justify-center items-center">
                     {
                         menu
                             ? <button className="block mx-2 px-2 py-1" onClick={() => setMenuLeftOpen(!isMenuLeftOpen)}>
@@ -57,19 +61,29 @@ export const Navbar: FC<DataProps> = ({ location, menu, sideMenu, navbarClass })
                                 <p className="text-stone-900">Logo</p>
                             </button>
                     }
+                </div> */}
+                <div className="w-full hidden lg:flex flex-row justify-between items-center">
+                    <p className="text-stone-900 text-sm">Test</p>
+                    <LanguageSwitcher/>
                 </div>
-                <div className="w-full h-20 hidden lg:flex flex-row justify-end items-center">
+                <div className="w-full hidden lg:flex flex-row justify-center items-center">
                     {
                         menu
                             ? menu.map((item: any) => (
-                                <button className={`hidden lg:block mx-2 px-2 py-1 duration-700 decoration-teal-500 underline-offset-8 hover:underline ${location?.includes(item.name) ? "underline" : ""}`} key={item.name} onClick={() => router.push(item.link)}>
-                                    <p className="font-semibold text-stone-900">{item.name}</p>
-                                </button>
+                                <Link
+                                    className={`hidden lg:block mx-2 px-2 py-1 duration-700 decoration-teal-600 underline-offset-8 hover:underline ${location?.includes(item.name) ? "underline" : ""}`}
+                                    href={`/${locale}${item.link}`}
+                                    key={item.name}>
+                                    <h3 className="text-teal-600">{dict[item.name]}</h3>
+                                </Link>
                             ))
                             : Menu.map((item: any) => (
-                                <button className={`hidden lg:block mx-2 px-2 py-1 duration-700 decoration-teal-500 underline-offset-8 hover:underline ${location?.includes(item.name) ? "underline" : ""}`} key={item.name} onClick={() => router.push(item.link)}>
-                                    <p className="font-semibold text-stone-900">{item.name}</p>
-                                </button>
+                                <Link
+                                    className={`hidden lg:block mx-2 px-2 py-1 duration-700 decoration-teal-600 underline-offset-8 hover:underline ${location?.includes(item.name) ? "underline" : ""}`}
+                                    href={`/${locale}${item.link}`}
+                                    key={item.name}>
+                                    <h3 className="text-teal-600">{dict[item.name]}</h3>
+                                </Link>
                             ))
                     }
                 </div>
@@ -79,7 +93,7 @@ export const Navbar: FC<DataProps> = ({ location, menu, sideMenu, navbarClass })
                     </button>
                 </div>
                 {
-                    pathname === "/home"
+                    pathname === "/ja" || pathname === "/en"
                         ? <></>
                         : <button className="p-4 absolute -bottom-14 cursor-pointer" onClick={() => router.back()}>
                             <IoArrowBackOutline className="text-stone-900 text-2xl" />
