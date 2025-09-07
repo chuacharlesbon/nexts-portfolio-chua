@@ -33,7 +33,7 @@ export default async function Page({ params }: { params: { lang: Locale } }) {
         <>
             <Navbar dict={dict} locale={currentParams.lang} />
             <div style={{ padding: 24 }}>
-                <p>{dict.welcome}</p>
+                <p className="title">{dict.welcome}</p>
                 <p>Explore</p>
             </div>
         </>

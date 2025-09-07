@@ -36,6 +36,12 @@ h1, h2, h3 {
   letter-spacing: 0.05em; /* adds breathing space */
 }
 
+.title {
+  font-family: var(--font-montserrat);
+  text-transform: uppercase;
+  letter-spacing: 0.05em; /* adds breathing space */
+}
+
 .chibi-spin {
   position: relative;
   width: 75px;
