@@ -1,3 +1,4 @@
+import { AboutComponent } from "@/components/clientside/about_page";
 import { Navbar } from "@/components/core/navbar";
 import { MetaInfo } from "@/constants/meta_info";
 import { Locale } from "@/lib/i18n/config";
@@ -32,10 +33,7 @@ export default async function Page({ params }: { params: { lang: Locale } }) {
     return (
         <>
             <Navbar dict={dict} locale={currentParams.lang} />
-            <div style={{ padding: 24 }}>
-                <p className="title">{dict.welcome}</p>
-                <p>About</p>
-            </div>
+            <AboutComponent dict={dict} locale={currentParams.lang} />
         </>
     );
 }

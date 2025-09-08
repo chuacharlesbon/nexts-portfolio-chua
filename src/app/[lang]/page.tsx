@@ -3,6 +3,7 @@ import { Locale } from "@/lib/i18n/config";
 import { Metadata } from "next";
 import { MetaInfo } from "@/constants/meta_info";
 import { Navbar } from "@/components/core/navbar";
+import { HomeComponent } from "@/components/clientside/home_page";
 
 type Props = {
     params: Promise<{ lang: string }>
@@ -32,10 +33,7 @@ export default async function Page({ params }: { params: { lang: Locale } }) {
     return (
         <>
             <Navbar dict={dict} locale={currentParams.lang} />
-            <div className="bg-white h-full" style={{ padding: 24 }}>
-                <p className="title">{dict.welcome}</p>
-                <p>Home</p>
-            </div>
+            <HomeComponent dict={dict} locale={currentParams.lang} />
         </>
     );
 }

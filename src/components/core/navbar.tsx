@@ -53,29 +53,33 @@ export const Navbar: FC<DataProps> = ({ location, menu, sideMenu, navbarClass, d
                     locale={locale}
                 />
                 <div className="w-full hidden lg:flex flex-row justify-between items-center">
-                    <AppLogo />
+                    <div className="w-40 flex flex-row justify-start items-center">
+                        <AppLogo />
+                    </div>
                     <div className="flex flex-row">
                         {
                             menu
                                 ? menu.map((item: any) => (
                                     <Link
-                                        className={`hidden lg:block mx-2 px-2 py-1 duration-700 decoration-teal-600 underline-offset-8 hover:underline ${location?.includes(item.name) ? "underline" : ""}`}
+                                        className={`hidden lg:block mx-2 px-2 py-1 duration-700 text-stone-900 underline-offset-8 hover:underline ${location?.includes(item.name) ? "underline" : ""}`}
                                         href={`/${locale}${item.link}`}
                                         key={item.name}>
-                                        <p className="title text-teal-600">{dict[item.name]}</p>
+                                        <p className="title text-stone-900">{dict[item.name]}</p>
                                     </Link>
                                 ))
                                 : Menu.map((item: any) => (
                                     <Link
-                                        className={`hidden lg:block mx-2 px-2 py-1 duration-700 decoration-teal-600 underline-offset-8 hover:underline ${location?.includes(item.name) ? "underline" : ""}`}
+                                        className={`hidden lg:block mx-2 px-2 py-1 duration-700 text-stone-900 underline-offset-8 hover:underline ${location?.includes(item.name) ? "underline" : ""}`}
                                         href={`/${locale}${item.link}`}
                                         key={item.name}>
-                                        <p className="title text-teal-600">{dict[item.name]}</p>
+                                        <p className="title text-stone-900">{dict[item.name]}</p>
                                     </Link>
                                 ))
                         }
                     </div>
-                    <LanguageSwitcher />
+                    <div className="w-40 flex flex-row justify-end items-center">
+                        <LanguageSwitcher />
+                    </div>
                 </div>
                 <div className="w-full h-20 lg:hidden flex flex-row justify-between items-center">
                     <AppLogo />

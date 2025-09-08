@@ -42,6 +42,144 @@ h1, h2, h3 {
   letter-spacing: 0.05em; /* adds breathing space */
 }
 
+.bg-color-cream {
+  background-color: #ebd3bb;
+}
+
+/* ///////////////////////// */
+/* ANIMATIONS                */
+/* ///////////////////////// */
+
+.shake-icon {
+  display: inline-block;
+  animation: shake-cycle 2.7s linear infinite; /* 0.7s shake + 2s pause */
+}
+
+@keyframes shake-cycle {
+  /* Idle (pause) */
+  0%, 74% { transform: translateX(0); }
+
+  /* Shake sequence (0.7s duration inside 2.7s cycle) */
+  75%  { transform: translateX(-5px); }
+  80%  { transform: translateX(5px); }
+  85%  { transform: translateX(-5px); }
+  90%  { transform: translateX(5px); }
+  95%  { transform: translateX(-5px); }
+
+  /* Back to normal */
+  100% { transform: translateX(0); }
+}
+
+.hidden-before-animate {
+  opacity: 0;
+  transform: translateY(20px); /* Optional: move it a bit down */
+  visibility: hidden;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(75px);
+  animation: fadeInUp 0.75s ease-in-out forwards; /* 1s delay */
+}
+
+.fade-in-delayed {
+  opacity: 0;
+  transform: translateY(75px);
+  animation: fadeInUp 0.75s ease-in-out 250ms forwards; /* 1s delay */
+}
+
+.fade-in-delayed-500ms {
+  opacity: 0;
+  transform: translateY(75px);
+  animation: fadeInUp 0.75s ease-in-out 500ms forwards; /* 1s delay */
+}
+
+.fade-in-delayed-750ms {
+  opacity: 0;
+  transform: translateY(75px);
+  animation: fadeInUp 0.75s ease-in-out 750ms forwards; /* 1s delay */
+}
+
+.fade-in-delayed-1000ms {
+  opacity: 0;
+  transform: translateY(75px);
+  animation: fadeInUp 0.75s ease-in-out 1000ms forwards; /* 1s delay */
+}
+
+.fade-in-delayed-1250ms {
+  opacity: 0;
+  transform: translateY(75px);
+  animation: fadeInUp 0.75s ease-in-out 1250ms forwards; /* 1s delay */
+}
+
+.fade-in-delayed-1500ms {
+  opacity: 0;
+  transform: translateY(75px);
+  animation: fadeInUp 0.75s ease-in-out 1500ms forwards; /* 1s delay */
+}
+
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-75px);
+  animation: fadeInLeft 500ms ease-out forwards;
+}
+
+.fade-in-left-delayed-300ms {
+  opacity: 0;
+  transform: translateX(-75px);
+  animation: fadeInLeft 500ms ease-out 300ms forwards;
+}
+
+.fade-in-left-delayed-750ms {
+  opacity: 0;
+  transform: translateX(-75px);
+  animation: fadeInLeft 500ms ease-out 750ms forwards;
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(75px);
+  animation: fadeInRight 500ms ease-out forwards;
+}
+
+.fade-in-right-delayed-300ms {
+  opacity: 0;
+  transform: translateX(75px);
+  animation: fadeInRight 500ms ease-out 300ms forwards;
+}
+
+.fade-in-right-delayed-750ms {
+  opacity: 0;
+  transform: translateX(75px);
+  animation: fadeInRight 500ms ease-out 750ms forwards;
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ///////////////////////// */
+/* IMAGES                    */
+/* ///////////////////////// */
+
 .chibi-spin {
   position: relative;
   width: 75px;

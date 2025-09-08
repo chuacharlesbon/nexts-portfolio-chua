@@ -13,7 +13,7 @@ export default function AppLogo() {
     return (
         <Link href={`/${currentLocale}`}>
             <button className="p-2 rounded-md text-stone-900 flex flex-row items-center justify-center">
-                <img src="favicon.ico" alt="app-logo" className="h-12 w-12 rounded-full" />
+                <img src="/favicon.ico" alt="app-logo" className="h-12 w-12 rounded-full" />
                 <p className="title mt-2">Chaaruzu</p>
             </button>
         </Link>

@@ -59,7 +59,7 @@ export const ModalMenuLeft: FC<ButtonProps> = ({
                                 menu
                                     ? menu[0].links.map((value: any) => (
                                         <Link
-                                            className={`w-full py-5 text-base font-bold text-stone-900 decoration-teal-500 underline-offset-8 hover:border-r-4 text-center`}
+                                            className={`w-full py-5 text-base font-bold text-stone-900 text-stone-900 underline-offset-8 hover:border-r-4 text-center`}
                                             key={value.name}
                                             href={value.url ?? value.link}
                                         >
@@ -111,7 +111,7 @@ export const ModalMenuRight: FC<ButtonProps> = ({
                                 menu
                                     ? menu[0].links.map((value: any) => (
                                         <Link
-                                            className={`w-full py-5 text-base text-teal-600 decoration-teal-600 underline-offset-8 hover:border-r-4 text-center`}
+                                            className={`w-full py-5 text-base text-stone-900 text-stone-900 underline-offset-8 hover:border-r-4 text-center`}
                                             key={value.name}
                                             href={`/${locale}${value.link}`}
                                         >

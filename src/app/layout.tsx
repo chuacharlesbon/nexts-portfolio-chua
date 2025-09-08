@@ -41,6 +41,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} ${montserrat.variable} antialiased`}
       >
         {children}
+      <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/242641079.js"></script>
       </body>
     </html>
   );
