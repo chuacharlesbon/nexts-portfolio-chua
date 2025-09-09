@@ -1,11 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useParams, usePathname } from "next/navigation";
 import Link from "next/link";
 import { FC } from "react";
 import { useScreenSize } from "@/hooks/useScreenSize";
-
-interface SwitchProps {}
 
 export const LanguageSwitcher: FC<any> = () => {
     const params = useParams();
