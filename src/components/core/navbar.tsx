@@ -1,6 +1,6 @@
 'use client'
 
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 import { FC } from "react";
 import { ModalMenuLeft, ModalMenuRight } from "./modal";
@@ -24,13 +24,10 @@ interface DataProps {
 
 export const Navbar: FC<DataProps> = ({ location, menu, sideMenu, navbarClass, dict, locale }) => {
 
-    const searchParams = useSearchParams();
-    const isMenuOpen: boolean = (searchParams?.get('menu') ?? "") === "open";
-
     const router = useRouter();
     const pathname = usePathname();
     const [isMenuLeftOpen, setMenuLeftOpen] = React.useState(false);
-    const [isMenuRightOpen, setMenuRightOpen] = React.useState(false); // React.useState(isMenuOpen);
+    const [isMenuRightOpen, setMenuRightOpen] = React.useState(false);
 
     return (
         <nav className={navbarClass ?? "fixed top-0 w-full bg-white z-40 px-4 py-0 lg:py-2 shadow-md"}>
