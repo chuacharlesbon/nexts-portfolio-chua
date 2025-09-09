@@ -7,20 +7,15 @@
     "metaDesc": "チャールズ・ボン・チュア：フルスタック開発者",
     "tagline": "コード。クリエイト。シンプル。",
     "home": "ホーム",
-    "about": "がいよう",
-    "contactUs": "おといあわせ",
+    "about": "がいよう", // Overview
+    "contactUs": "おといあわせ", // Inquiry
     "explore": "エクスプロア",
-    "featured": "じっせき",
+    "featured": "じっせき",　// Achivements
     "viewMore": "さらに ひょうじ",
     "jlptTitle": "日本語能力試験",
     "jlptDescription": "こんにちは　わたし　は　にほんご　の　N5　ﾚﾍﾞﾚ　ごうかくしゃ です。わたし　は　たくさん　きかい　が　ほしい　です　から　きょねん　にほんご　を　べんきょうました。いつか　あなた　と　いっしょに　しごと　が　したいです。よろしく　おねがいします。",
     "inputPlaceholder": "なにをかんがえていますか？",
-    "growthSection": "せんもんてきなせいちょう",
+    "growthSection": "せんもんてきなせいちょう", // Professional Growth
     "zuittTitle": "ズイット・ラーニング・インスティテュート",
-    "zuittDesc": "さんねん　まえ　に　ズイット　で　わたし　は　コーヂング　を　べんきょうしました。たくさん　ウェブ　フレームワーク　を　ならいました。しごと　で、わたし　は　フルスタック開発者　です。",
-    "projectsTitle": "プロジェクト",
-    "bookingAppTitle": "ブッキングアプリ",
-    "bookingAppDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non massa sapien. Suspendisse sollicitudin urna sit amet dictum tempus. Donec commodo nisi quam, et finibus.",
-    "reportAppTitle": "Eレポートアプリ",
-    "reportAppDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non massa sapien. Suspendisse sollicitudin urna sit amet dictum tempus. Donec commodo nisi quam, et finibus."
+    "zuittDesc": "I started my coding journey in Zuitt 3 years ago. I learned different modern tools and frameworks for web development."
 }

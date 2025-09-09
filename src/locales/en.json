@@ -5,8 +5,22 @@
     "logout": "Logout",
     "metaTitle": "Developer Portfolio",
     "metaDesc": "Charles Bon Chua: Full Stack Developer",
+    "tagline": "Code. Create. Simplify",
     "home": "HOME",
     "about": "ABOUT",
     "contactUs": "CONTACT US",
-    "explore": "EXPLORE"
+    "explore": "EXPLORE",
+    "viewMore": "VIEW MORE",
+    "featured": "ACHIEVEMENTS",
+    "jlptTitle": "Japanese Language Proficiency Test",
+    "jlptDescription": "Hi, I'm a JLPT N5 Level Passer. I studied Japanese language a year ago and seeks greater job opportunities in the industry. I'm open for offers and I hope we can connect. Thank you very much",
+    "inputPlaceholder": "What's on your mind?",
+    "growthSection": "Professional Growth",
+    "zuittTitle": "Zuitt Learning Institute",
+    "zuittDesc": "I started my coding journey in Zuitt 3 years ago. I learned different modern tools and frameworks for web development. I had the opportunity to work as a full stack developer.",
+    "projectsTitle": "PROJECTS",
+    "bookingAppTitle": "Booking App",
+    "bookingAppDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non massa sapien. Suspendisse sollicitudin urna sit amet dictum tempus. Donec commodo nisi quam, et finibus.",
+    "reportAppTitle": "EReport App",
+    "reportAppDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non massa sapien. Suspendisse sollicitudin urna sit amet dictum tempus. Donec commodo nisi quam, et finibus."
 }

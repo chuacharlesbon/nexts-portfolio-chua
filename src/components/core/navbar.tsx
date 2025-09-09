@@ -30,71 +30,69 @@ export const Navbar: FC<DataProps> = ({ location, menu, sideMenu, navbarClass, d
     const router = useRouter();
     const pathname = usePathname();
     const [isMenuLeftOpen, setMenuLeftOpen] = React.useState(false);
-    const [isMenuRightOpen, setMenuRightOpen] = React.useState(isMenuOpen);
+    const [isMenuRightOpen, setMenuRightOpen] = React.useState(false); // React.useState(isMenuOpen);
 
     return (
-        <>
-            <nav className={navbarClass ?? "sticky top-0 bg-white relative z-40 px-4 py-0 lg:py-2 shadow-md"}>
-                <ModalMenuLeft
-                    onClose={() => setMenuLeftOpen(false)}
-                    isOpen={isMenuLeftOpen}
-                    menu={sideMenu}
-                />
-                <ModalMenuRight
-                    onClose={() => setMenuRightOpen(false)}
-                    isOpen={isMenuRightOpen}
-                    menu={[
-                        {
-                            name: "Side Menu",
-                            links: menu ?? Menu
-                        }
-                    ]}
-                    dict={dict}
-                    locale={locale}
-                />
-                <div className="w-full hidden lg:flex flex-row justify-between items-center">
-                    <div className="w-40 flex flex-row justify-start items-center">
-                        <AppLogo />
-                    </div>
-                    <div className="flex flex-row">
-                        {
-                            menu
-                                ? menu.map((item: any) => (
-                                    <Link
-                                        className={`hidden lg:block mx-2 px-2 py-1 duration-700 text-stone-900 underline-offset-8 hover:underline ${location?.includes(item.name) ? "underline" : ""}`}
-                                        href={`/${locale}${item.link}`}
-                                        key={item.name}>
-                                        <p className="title text-stone-900">{dict[item.name]}</p>
-                                    </Link>
-                                ))
-                                : Menu.map((item: any) => (
-                                    <Link
-                                        className={`hidden lg:block mx-2 px-2 py-1 duration-700 text-stone-900 underline-offset-8 hover:underline ${location?.includes(item.name) ? "underline" : ""}`}
-                                        href={`/${locale}${item.link}`}
-                                        key={item.name}>
-                                        <p className="title text-stone-900">{dict[item.name]}</p>
-                                    </Link>
-                                ))
-                        }
-                    </div>
-                    <div className="w-40 flex flex-row justify-end items-center">
-                        <LanguageSwitcher />
-                    </div>
-                </div>
-                <div className="w-full h-20 lg:hidden flex flex-row justify-between items-center">
+        <nav className={navbarClass ?? "fixed top-0 w-full bg-white z-40 px-4 py-0 lg:py-2 shadow-md"}>
+            <ModalMenuLeft
+                onClose={() => setMenuLeftOpen(false)}
+                isOpen={isMenuLeftOpen}
+                menu={sideMenu}
+            />
+            <ModalMenuRight
+                onClose={() => setMenuRightOpen(false)}
+                isOpen={isMenuRightOpen}
+                menu={[
+                    {
+                        name: "Side Menu",
+                        links: menu ?? Menu
+                    }
+                ]}
+                dict={dict}
+                locale={locale}
+            />
+            <div className="w-full hidden lg:flex flex-row justify-between items-center">
+                <div className="w-40 flex flex-row justify-start items-center">
                     <AppLogo />
-                    <button className="block mx-2 px-2 py-1" onClick={() => setMenuRightOpen(!isMenuRightOpen)}>
-                        <IoMdMenu className="text-stone-900 text-2xl" />
-                    </button>
                 </div>
-                {
-                    pathname === "/ja" || pathname === "/en"
-                        ? <></>
-                        : <button className="p-4 absolute -bottom-14 cursor-pointer" onClick={() => router.back()}>
-                            <IoArrowBackOutline className="text-stone-900 text-2xl" />
-                        </button>
-                }
-            </nav>
-        </>
+                <div className="flex flex-row">
+                    {
+                        menu
+                            ? menu.map((item: any) => (
+                                <Link
+                                    className={`hidden lg:block mx-2 px-2 py-1 duration-700 text-stone-900 underline-offset-8 hover:underline ${location?.includes(item.name) ? "underline" : ""}`}
+                                    href={`/${locale}${item.link}`}
+                                    key={item.name}>
+                                    <p className="title text-stone-900">{dict[item.name]}</p>
+                                </Link>
+                            ))
+                            : Menu.map((item: any) => (
+                                <Link
+                                    className={`hidden lg:block mx-2 px-2 py-1 duration-700 text-stone-900 underline-offset-8 hover:underline ${location?.includes(item.name) ? "underline" : ""}`}
+                                    href={`/${locale}${item.link}`}
+                                    key={item.name}>
+                                    <p className="title text-stone-900">{dict[item.name]}</p>
+                                </Link>
+                            ))
+                    }
+                </div>
+                <div className="w-40 flex flex-row justify-end items-center">
+                    <LanguageSwitcher />
+                </div>
+            </div>
+            <div className="w-full h-20 lg:hidden flex flex-row justify-between items-center">
+                <AppLogo />
+                <button className="block mx-2 px-2 py-1" onClick={() => setMenuRightOpen(!isMenuRightOpen)}>
+                    <IoMdMenu className="text-stone-900 text-2xl" />
+                </button>
+            </div>
+            {
+                pathname === "/ja" || pathname === "/en"
+                    ? <></>
+                    : <button className="p-4 absolute -bottom-14 cursor-pointer" onClick={() => router.back()}>
+                        <IoArrowBackOutline className="text-stone-900 text-2xl" />
+                    </button>
+            }
+        </nav>
     )
 }
