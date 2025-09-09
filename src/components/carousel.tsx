@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { FC } from "react";
 import ImageGallery from "react-image-gallery";
