@@ -30,7 +30,7 @@ export const Navbar: FC<DataProps> = ({ location, menu, sideMenu, navbarClass, d
     const [isMenuRightOpen, setMenuRightOpen] = React.useState(false);
 
     return (
-        <nav className={navbarClass ?? "fixed top-0 w-full bg-white z-40 px-4 py-0 lg:py-2 shadow-md"}>
+        <nav className={navbarClass ?? "fixed top-0 w-full bg-stone-950 z-40 px-4 py-0 lg:py-2 border-b border-stone-900"}>
             <ModalMenuLeft
                 onClose={() => setMenuLeftOpen(false)}
                 isOpen={isMenuLeftOpen}
@@ -57,18 +57,18 @@ export const Navbar: FC<DataProps> = ({ location, menu, sideMenu, navbarClass, d
                         menu
                             ? menu.map((item: any) => (
                                 <Link
-                                    className={`hidden lg:block mx-2 px-2 py-1 duration-700 text-stone-900 underline-offset-8 hover:underline ${location?.includes(item.name) ? "underline" : ""}`}
+                                    className={`hidden lg:block mx-2 px-2 py-1 duration-700 text-beige underline-offset-8 hover:underline ${location?.includes(item.name) ? "underline" : ""}`}
                                     href={`/${locale}${item.link}`}
                                     key={item.name}>
-                                    <p className="title text-stone-900">{dict[item.name]}</p>
+                                    <p className="title text-beige">{dict[item.name]}</p>
                                 </Link>
                             ))
                             : Menu.map((item: any) => (
                                 <Link
-                                    className={`hidden lg:block mx-2 px-2 py-1 duration-700 text-stone-900 underline-offset-8 hover:underline ${location?.includes(item.name) ? "underline" : ""}`}
+                                    className={`hidden lg:block mx-2 px-2 py-1 duration-700 text-beige underline-offset-8 hover:underline ${location?.includes(item.name) ? "underline" : ""}`}
                                     href={`/${locale}${item.link}`}
                                     key={item.name}>
-                                    <p className="title text-stone-900">{dict[item.name]}</p>
+                                    <p className="title text-beige">{dict[item.name]}</p>
                                 </Link>
                             ))
                     }
@@ -80,7 +80,7 @@ export const Navbar: FC<DataProps> = ({ location, menu, sideMenu, navbarClass, d
             <div className="w-full h-20 lg:hidden flex flex-row justify-between items-center">
                 <AppLogo />
                 <button className="block mx-2 px-2 py-1" onClick={() => setMenuRightOpen(!isMenuRightOpen)}>
-                    <IoMdMenu className="text-stone-900 text-2xl" />
+                    <IoMdMenu className="text-beige text-2xl" />
                 </button>
             </div>
             {
