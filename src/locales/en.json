@@ -23,5 +23,13 @@
     "bookingAppTitle": "Booking App",
     "bookingAppDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non massa sapien. Suspendisse sollicitudin urna sit amet dictum tempus. Donec commodo nisi quam, et finibus.",
     "reportAppTitle": "EReport App",
-    "reportAppDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non massa sapien. Suspendisse sollicitudin urna sit amet dictum tempus. Donec commodo nisi quam, et finibus."
+    "reportAppDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non massa sapien. Suspendisse sollicitudin urna sit amet dictum tempus. Donec commodo nisi quam, et finibus.",
+    "aboutDescription": "Hi, I'm Charles, a passionate programmer. I have been working as a full-stack developer for three years. In this industry, I make production-grade and user-friendly applications.",
+    "otherDetails": "Other Details",
+    "workExperience": "Work Experience",
+    "prospernaTitle": "Prosperna Philippines, Inc.",
+    "prospernaDesc": "Developed and maintained enterprise-level web and mobile applications as a Full Stack Developer, working on both frontend (React.js, Flutter, Wix) and backend (Node.js, Express, MySQL) components.",
+    "prospernaDesc2": "Prosperna Ecommerce Admin Mobile App: Implemented dashboard and order features revamp, JNT waybill and Geolocation.",
+    "prospernaDesc3": "Guam-based public utility company app: Implemented new security features, site enhancements, bug fixes.",
+    "prospernaDesc4": "Philippine-based riding app: Implemented news, announcements and booking features, minor enhancements."
 }

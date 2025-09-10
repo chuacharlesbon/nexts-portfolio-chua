@@ -86,8 +86,8 @@ export const Navbar: FC<DataProps> = ({ location, menu, sideMenu, navbarClass, d
             {
                 pathname === "/ja" || pathname === "/en"
                     ? <></>
-                    : <button className="p-4 absolute -bottom-14 cursor-pointer" onClick={() => router.back()}>
-                        <IoArrowBackOutline className="text-stone-900 text-2xl" />
+                    : <button className="py-4 absolute -bottom-14 cursor-pointer" onClick={() => router.back()}>
+                        <IoArrowBackOutline className="text-white text-2xl" />
                     </button>
             }
         </nav>

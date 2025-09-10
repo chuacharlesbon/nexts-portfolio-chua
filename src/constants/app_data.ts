@@ -73,3 +73,14 @@ export const reportApp = [
         thumbnail: "/images/ereport_app_4.png",
     },
 ]
+
+export const prospernaImages = [
+    {
+        original: "/images/prosperna.png",
+        thumbnail: "/images/prosperna.png",
+    },
+    {
+        original: "/images/privacy.png",
+        thumbnail: "/images/privacy.png",
+    },
+]

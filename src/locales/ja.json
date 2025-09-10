@@ -19,9 +19,17 @@
     "zuittTitle": "ズイット・ラーニング・インスティテュート",
     "zuittDesc": "さんねん　まえ　に　ズイット　で　わたし　は　コーヂング　を　べんきょうしました。たくさん　ウェブ　フレームワーク　を　ならいました。しごと　で、わたし　は　フルスタック開発者　です。",
     "projectsTitle": "プロジェクト",
-    "projectsInfo": "クライアントとの契約があるので、プロジェクトを見せません。",
+    "projectsInfo": "クライアントとのけいやくがあるので、プロジェクトを見せません。",
     "bookingAppTitle": "ブッキングアプリ",
     "bookingAppDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non massa sapien. Suspendisse sollicitudin urna sit amet dictum tempus. Donec commodo nisi quam, et finibus.",
     "reportAppTitle": "Eレポートアプリ",
-    "reportAppDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non massa sapien. Suspendisse sollicitudin urna sit amet dictum tempus. Donec commodo nisi quam, et finibus."
+    "reportAppDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non massa sapien. Suspendisse sollicitudin urna sit amet dictum tempus. Donec commodo nisi quam, et finibus.",
+    "aboutDescription": "こんにちは　わたし　は　チャールズ　じょうねつてき　な　プログラム　です。わたし　は　さんねんかん　フルスタック　かいはつしゃ　と　して　はたらいて　います。この　ぎょうかい　で、わたし　は　じつようてき　で　つかいやすい　あぷり　を　つくります。",
+    "otherDetails": "Other Details",
+    "workExperience": "じつむ　けいけん",
+    "prospernaTitle": "Prosperna Philippines, Inc.",
+    "prospernaDesc": "Developed and maintained enterprise-level web and mobile applications as a Full Stack Developer, working on both frontend (React.js, Flutter, Wix) and backend (Node.js, Express, MySQL) components.",
+    "prospernaDesc2": "Prosperna Ecommerce Admin Mobile App: Implemented dashboard and order features revamp, JNT waybill and Geolocation.",
+    "prospernaDesc3": "Guam-based public utility company app: Implemented new security features, site enhancements, bug fixes.",
+    "propsernaDesc4": "Philippine-based riding app: Implemented news, announcements and booking features, minor enhancements."
 }
