@@ -19,7 +19,7 @@ export const MyCarousel: FC<CarouselProps> = ({ images, dict }) => {
             <Disclosure>
                 <DisclosureButton className="px-8 py-4 shadow-md rounded-md border border-stone-200"><p className="title text-stone-900 text-center">{dict.viewMore}</p></DisclosureButton>
                 <DisclosurePanel className="">
-                    <div className="p-4 w-full md:w-lg lg:w-xl xl:w-3xl mx-auto mt-10 fade-in-delayed-750ms">
+                    <div className="p-4 w-60 md:w-lg lg:w-xl xl:w-3xl mx-auto mt-10 fade-in-delayed-750ms">
                         <ImageGallery items={images} />
                     </div>
                 </DisclosurePanel>

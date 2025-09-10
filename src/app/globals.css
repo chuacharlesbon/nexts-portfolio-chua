@@ -194,6 +194,27 @@ h1, h2, h3 {
   }
 }
 
+@media (max-width: 420px) {
+  .fade-in-left {
+    transform: translateX(-15px);
+  }
+  .fade-in-left-delayed-300ms {
+    transform: translateX(-15px);
+  }
+  .fade-in-left-delayed-750ms {
+    transform: translateX(-15px);
+  }
+  .fade-in-right {
+    transform: translateX(15px);
+  }
+  .fade-in-right-delayed-300ms {
+    transform: translateX(15px);
+  }
+  .fade-in-right-delayed-750ms {
+    transform: translateX(15px);
+  }
+}
+
 /* ///////////////////////// */
 /* IMAGES                    */
 /* ///////////////////////// */

@@ -47,7 +47,7 @@ export const HomeComponent: FC<PageProps> = ({ dict, locale }) => {
                 <ResponsiveLgFlexRow className="w-full items-center justify-center">
                     <img alt="jlpt" className="object-contain my-4 w-60 xl:w-md  fade-in-left-delayed-300ms shadow-lg" src="/images/jlpt.png" />
                     <div className="h-2 w-20" />
-                    <div className="w-72 xl:w-md fade-in-right-delayed-750ms">
+                    <div className="w-60 md:w-72 xl:w-md fade-in-right-delayed-750ms">
                         <p className="title text-stone-900 text-center lg:text-left text-2xl mb-4">{dict.jlptTitle}</p>
                         <p className="text-stone-900 text-center lg:text-left">{dict.jlptDescription}</p>
                     </div>
@@ -65,7 +65,7 @@ export const HomeComponent: FC<PageProps> = ({ dict, locale }) => {
                 <ResponsiveLgFlexRow className="w-full items-center justify-center">
                     <img alt="zuitt-cert" className="object-contain my-4 w-60 xl:w-md fade-in-left-delayed-300ms shadow-lg" src="/images/docs/zuitt-fullstack-cert.jpeg" />
                     <div className="h-2 w-20" />
-                    <div className="w-72 xl:w-md fade-in-right-delayed-750ms">
+                    <div className="w-60 md:w-72 xl:w-md fade-in-right-delayed-750ms">
                         <p className="title text-stone-900 text-center lg:text-left text-2xl mb-4">{dict.zuittTitle}</p>
                         <p className="text-stone-900 text-center lg:text-left">{dict.zuittDesc}</p>
                     </div>
@@ -83,7 +83,7 @@ export const HomeComponent: FC<PageProps> = ({ dict, locale }) => {
                 <ResponsiveLgFlexRow className="w-full items-center justify-center">
                     <img alt="booking-app" className="object-contain my-4 w-60 xl:w-md fade-in-left-delayed-300ms shadow-lg" src="/images/wyn_logo.png" />
                     <div className="h-2 w-20" />
-                    <div className="w-72 xl:w-md fade-in-right-delayed-750ms">
+                    <div className="w-60 md:w-72 xl:w-md fade-in-right-delayed-750ms">
                         <p className="title text-stone-900 text-center lg:text-left text-2xl mb-4">{dict.bookingAppTitle}</p>
                         <p className="text-stone-900 text-center lg:text-left">{dict.bookingAppDesc}</p>
                     </div>
@@ -97,7 +97,7 @@ export const HomeComponent: FC<PageProps> = ({ dict, locale }) => {
                 <ResponsiveLgFlexRow className="w-full items-center justify-center">
                     <img alt="ereport-app" className="object-contain my-4 w-60 xl:w-md fade-in-left-delayed-300ms shadow-lg" src="/images/ereport_app_logo.png" />
                     <div className="h-2 w-20" />
-                    <div className="w-72 xl:w-md fade-in-right-delayed-750ms">
+                    <div className="w-60 md:w-72 xl:w-md fade-in-right-delayed-750ms">
                         <p className="title text-stone-900 text-center lg:text-left text-2xl mb-4">{dict.reportAppTitle}</p>
                         <p className="text-stone-900 text-center lg:text-left">{dict.reportAppDesc}</p>
                     </div>
