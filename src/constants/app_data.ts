@@ -83,4 +83,53 @@ export const prospernaImages = [
         original: "/images/privacy.png",
         thumbnail: "/images/privacy.png",
     },
+    {
+        original: "/images/privacy.png",
+        thumbnail: "/images/privacy.png",
+    },
+]
+
+export const xtendlyImages = [
+    {
+        original: "/images/xtendly.png",
+        thumbnail: "/images/xtendly.png",
+    },
+    {
+        original: "/images/privacy.png",
+        thumbnail: "/images/privacy.png",
+    },
+    {
+        original: "/images/privacy.png",
+        thumbnail: "/images/privacy.png",
+    },
+]
+
+export const zuittJlptImages = [
+    {
+        original: "/images/zuitt_jlpt.png",
+        thumbnail: "/images/zuitt_jlpt.png",
+    },
+    {
+        original: "/images/jlpt_result.png",
+        thumbnail: "/images/jlpt_result.png",
+    },
+    {
+        original: "/images/zuitt.png",
+        thumbnail: "/images/zuitt.png",
+    },
+]
+
+export const appleImages = [
+    {
+        original: "/images/apple.png",
+        thumbnail: "/images/apple.png",
+    },
+    {
+        original: "/images/appstore.png",
+        thumbnail: "/images/appstore.png",
+    },
+    {
+        original: "/images/xcode.png",
+        thumbnail: "/images/xcode.png",
+    },
 ]

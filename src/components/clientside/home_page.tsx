@@ -124,5 +124,7 @@ export const HomeComponent: FC<PageProps> = ({ dict, locale }) => {
             </FlexColumn>
             <div className="py-20" />
         </section>
+
+        <div className="h-80" />
     </div>
 }
