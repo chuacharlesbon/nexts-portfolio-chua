@@ -100,7 +100,7 @@ export const ModalMenuRight: FC<ButtonProps> = ({
                     >
                         <div
                             className="h-full w-72 overflow-hidden text-left z-20 py-2 items-center
-            align-middle transition-all transform bg-beige shadow-xl flex flex-col relative"
+            align-middle transition-all transform bg-dark-beige shadow-xl flex flex-col relative"
                         >
                             <button className="absolute top-0 right-0 block mx-2 mt-6 px-2 py-2 cursor-pointer" onClick={onClose}>
                                 <FaTimes className={`text-lg text-stone-700`} />
@@ -116,7 +116,7 @@ export const ModalMenuRight: FC<ButtonProps> = ({
                                             href={`/${locale}${value.link}`}
                                         >
                                             {/* <i className={`${value.icon} w-14 text-2xl`} /> */}
-                                            <span className="title text-dark-beige">{dict![value.name]}</span>
+                                            <span className="title text-light-beige">{dict![value.name]}</span>
                                         </Link>
                                     ))
                                     : <></>

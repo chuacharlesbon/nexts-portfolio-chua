@@ -42,7 +42,7 @@ export const HomeComponent: FC<PageProps> = ({ dict, locale }) => {
         {/* FEATURED SECTION */}
         <section className="">
             <FlexColumn className="w-full py-10 lg:py-20 items-center justify-center">
-                <p className="title text-3xl text-beige text-center my-12">{dict.featured}</p>
+                <p className="title text-3xl text-light-beige text-center my-12">{dict.featured}</p>
             </FlexColumn>
             <FlexColumn className="w-full items-center justify-center">
                 <IntersectionObserverDiv>
@@ -50,8 +50,8 @@ export const HomeComponent: FC<PageProps> = ({ dict, locale }) => {
                         <img alt="jlpt" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-left-delayed-300ms shadow-lg" src="/images/jlpt.png" />
                         <div className="h-2 w-20" />
                         <div className="w-60 md:w-72 xl:w-md fade-in-right-delayed-750ms">
-                            <p className="title text-beige text-center lg:text-left text-2xl mb-4">{dict.jlptTitle}</p>
-                            <p className="text-beige text-center lg:text-left">{dict.jlptDescription}</p>
+                            <p className="title text-light-beige text-center lg:text-left text-2xl mb-4">{dict.jlptTitle}</p>
+                            <p className="text-light-beige text-center lg:text-left">{dict.jlptDescription}</p>
                         </div>
                     </ResponsiveLgFlexRow>
                     <MyCarousel dict={dict} locale={locale} images={jlptCarousel} />
@@ -62,21 +62,21 @@ export const HomeComponent: FC<PageProps> = ({ dict, locale }) => {
         {/* ZUITT SECTION */}
         <section className="">
             <FlexColumn className="w-full py-10 lg:py-20 items-center justify-center">
-                <p className="title text-3xl text-beige text-center my-12">{dict.growthSection}</p>
+                <p className="title text-3xl text-light-beige text-center my-12">{dict.growthSection}</p>
             </FlexColumn>
             <FlexColumn className="w-full items-center justify-center">
                 <IntersectionObserverDiv>
                     <ResponsiveLgFlexRow className="w-full items-center justify-center">
                         <div className="hidden lg:block w-60 md:w-72 xl:w-md fade-in-left-delayed-750ms">
-                            <p className="title text-beige text-center lg:text-left text-2xl mb-4">{dict.zuittTitle}</p>
-                            <p className="text-beige text-center lg:text-left">{dict.zuittDesc}</p>
+                            <p className="title text-light-beige text-center lg:text-left text-2xl mb-4">{dict.zuittTitle}</p>
+                            <p className="text-light-beige text-center lg:text-left">{dict.zuittDesc}</p>
                         </div>
                         <div className="hidden lg:block h-2 w-20" />
                         <img alt="zuitt-cert" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-right-delayed-300ms shadow-lg" src="/images/docs/zuitt-fullstack-cert.jpeg" />
                         <div className="lg:hidden h-2 w-20" />
                         <div className="lg:hidden w-60 md:w-72 xl:w-md fade-in-left-delayed-750ms">
-                            <p className="title text-beige text-center lg:text-left text-2xl mb-4">{dict.zuittTitle}</p>
-                            <p className="text-beige text-center lg:text-left">{dict.zuittDesc}</p>
+                            <p className="title text-light-beige text-center lg:text-left text-2xl mb-4">{dict.zuittTitle}</p>
+                            <p className="text-light-beige text-center lg:text-left">{dict.zuittDesc}</p>
                         </div>
                     </ResponsiveLgFlexRow>
                     <MyCarousel dict={dict} locale={locale} images={zuittCerts} />
@@ -87,8 +87,8 @@ export const HomeComponent: FC<PageProps> = ({ dict, locale }) => {
         {/* PROJECTS SECTION */}
         <section className="">
             <FlexColumn className="w-full py-10 lg:py-20 items-center justify-center">
-                <p className="title text-3xl text-beige text-center my-12">{dict.projectsTitle}</p>
-                <p className="text-beige text-center my-12"><span className="text-red-500">*</span>{dict.projectsInfo}</p>
+                <p className="title text-3xl text-light-beige text-center my-12">{dict.projectsTitle}</p>
+                <p className="text-light-beige text-center my-12"><span className="text-red-500">*</span>{dict.projectsInfo}</p>
             </FlexColumn>
             <FlexColumn className="w-full items-center justify-center">
                 <IntersectionObserverDiv>
@@ -96,8 +96,8 @@ export const HomeComponent: FC<PageProps> = ({ dict, locale }) => {
                         <img alt="booking-app" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-left-delayed-300ms shadow-lg" src="/images/wyn_logo.png" />
                         <div className="h-2 w-20" />
                         <div className="w-60 md:w-72 xl:w-md fade-in-right-delayed-750ms">
-                            <p className="title text-beige text-center lg:text-left text-2xl mb-4">{dict.bookingAppTitle}</p>
-                            <p className="text-beige text-center lg:text-left">{dict.bookingAppDesc}</p>
+                            <p className="title text-light-beige text-center lg:text-left text-2xl mb-4">{dict.bookingAppTitle}</p>
+                            <p className="text-light-beige text-center lg:text-left">{dict.bookingAppDesc}</p>
                         </div>
                     </ResponsiveLgFlexRow>
                     <MyCarousel dict={dict} locale={locale} images={bookingApp} />
@@ -108,15 +108,15 @@ export const HomeComponent: FC<PageProps> = ({ dict, locale }) => {
                 <IntersectionObserverDiv>
                     <ResponsiveLgFlexRow className="w-full items-center justify-center">
                         <div className="hidden lg:block w-60 md:w-72 xl:w-md fade-in-left-delayed-750ms">
-                            <p className="title text-beige text-center lg:text-left text-2xl mb-4">{dict.reportAppTitle}</p>
-                            <p className="text-beige text-center lg:text-left">{dict.reportAppDesc}</p>
+                            <p className="title text-light-beige text-center lg:text-left text-2xl mb-4">{dict.reportAppTitle}</p>
+                            <p className="text-light-beige text-center lg:text-left">{dict.reportAppDesc}</p>
                         </div>
                         <div className="hidden lg:block h-2 w-20" />
                         <img alt="ereport-app" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-right-delayed-300ms shadow-lg" src="/images/ereport_app_logo.png" />
                         <div className="lg:hidden h-2 w-20" />
                         <div className="lg:hidden w-60 md:w-72 xl:w-md fade-in-left-delayed-750ms">
-                            <p className="title text-beige text-center lg:text-left text-2xl mb-4">{dict.reportAppTitle}</p>
-                            <p className="text-beige text-center lg:text-left">{dict.reportAppDesc}</p>
+                            <p className="title text-light-beige text-center lg:text-left text-2xl mb-4">{dict.reportAppTitle}</p>
+                            <p className="text-light-beige text-center lg:text-left">{dict.reportAppDesc}</p>
                         </div>
                     </ResponsiveLgFlexRow>
                     <MyCarousel dict={dict} locale={locale} images={reportApp} />

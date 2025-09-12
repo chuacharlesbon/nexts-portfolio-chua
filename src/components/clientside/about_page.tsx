@@ -30,15 +30,15 @@ export const AboutComponent: FC<PageProps> = ({ dict, locale }) => {
         {/* PERSONAL INFO SECTION */}
         <section className="">
             <FlexColumn className="w-full py-10 lg:py-20 items-center justify-center">
-                <p className="title text-3xl text-beige text-center mb-12">{dict.about}</p>
-                <p className="w-60 md:w-lg text-beige text-center mx-auto mt-8">{dict.aboutDescription}</p>
+                <p className="title text-3xl text-light-beige text-center mb-12">{dict.about}</p>
+                <p className="w-60 md:w-lg text-light-beige text-center mx-auto mt-8">{dict.aboutDescription}</p>
             </FlexColumn>
         </section>
 
         {/* WORK EXPERIENCE SECTION */}
         <section className="">
             <FlexColumn className="w-full py-4 lg:py-10 items-center justify-center">
-                <p className="title text-3xl text-beige text-center my-12">{dict.workExperience}</p>
+                <p className="title text-3xl text-light-beige text-center my-12">{dict.workExperience}</p>
             </FlexColumn>
             <FlexColumn className="w-full items-center justify-center">
                 <IntersectionObserverDiv>
@@ -46,15 +46,15 @@ export const AboutComponent: FC<PageProps> = ({ dict, locale }) => {
                         <img alt="jlpt" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-left-delayed-300ms shadow-lg" src="/images/prosperna.png" />
                         <div className="h-2 w-20" />
                         <div className="w-60 md:w-72 xl:w-md fade-in-right-delayed-750ms">
-                            <p className="title text-beige text-center lg:text-left text-2xl mb-4">{dict.prospernaTitle}</p>
-                            <p className="text-beige text-center lg:text-left mb-4">January 2024 - April 2025</p>
-                            <p className="text-beige text-center lg:text-left">{dict.prospernaDesc}</p>
+                            <p className="title text-light-beige text-center lg:text-left text-2xl mb-4">{dict.prospernaTitle}</p>
+                            <p className="text-light-beige text-center lg:text-left mb-4">January 2024 - April 2025</p>
+                            <p className="text-light-beige text-center lg:text-left">{dict.prospernaDesc}</p>
                             <Disclosure>
-                                <DisclosureButton className="w-full flex flex-row justify-center lg:justify-start"><p className="title text-beige text-center lg:text-left my-4 underline">{dict.otherDetails}</p></DisclosureButton>
+                                <DisclosureButton className="w-full flex flex-row justify-center lg:justify-start"><p className="title text-light-beige text-center lg:text-left my-4 underline">{dict.otherDetails}</p></DisclosureButton>
                                 <DisclosurePanel className="w-full">
-                                    <p className="text-beige text-center lg:text-left mb-2">{dict.prospernaDesc2}</p>
-                                    <p className="text-beige text-center lg:text-left mb-2">{dict.prospernaDesc3}</p>
-                                    <p className="text-beige text-center lg:text-left mb-2">{dict.prospernaDesc4}</p>
+                                    <p className="text-light-beige text-center lg:text-left mb-2">{dict.prospernaDesc2}</p>
+                                    <p className="text-light-beige text-center lg:text-left mb-2">{dict.prospernaDesc3}</p>
+                                    <p className="text-light-beige text-center lg:text-left mb-2">{dict.prospernaDesc4}</p>
                                 </DisclosurePanel>
                             </Disclosure>
                         </div>

@@ -60,7 +60,7 @@ export const Navbar: FC<DataProps> = ({ location, menu, sideMenu, navbarClass, d
                                     className={`hidden lg:block mx-2 px-2 py-1 duration-700 text-beige underline-offset-8 hover:underline ${location?.includes(item.name) ? "underline" : ""}`}
                                     href={`/${locale}${item.link}`}
                                     key={item.name}>
-                                    <p className="title text-beige">{dict[item.name]}</p>
+                                    <p className="title text-light-beige">{dict[item.name]}</p>
                                 </Link>
                             ))
                             : Menu.map((item: any) => (
@@ -68,7 +68,7 @@ export const Navbar: FC<DataProps> = ({ location, menu, sideMenu, navbarClass, d
                                     className={`hidden lg:block mx-2 px-2 py-1 duration-700 text-beige underline-offset-8 hover:underline ${location?.includes(item.name) ? "underline" : ""}`}
                                     href={`/${locale}${item.link}`}
                                     key={item.name}>
-                                    <p className="title text-beige">{dict[item.name]}</p>
+                                    <p className="title text-light-beige">{dict[item.name]}</p>
                                 </Link>
                             ))
                     }

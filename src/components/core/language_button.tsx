@@ -21,7 +21,7 @@ export const LanguageSwitcher: FC<any> = () => {
 
     return (
         <Link href={newPath}>
-            <button className="p-2 text-beige text-sm flex flex-row items-center justify-center border-stone-900 hover:border-b">
+            <button className="p-2 text-light-beige text-sm flex flex-row items-center justify-center border-beige hover:border-b">
                 <img src={`/logo/${otherLocale}-icon.png`} alt="chibi front" className="h-6 w-6 rounded-full mr-4 border border-stone-300" />
                 <p>{otherLocale === "en" ? "English" : "日本語"}</p>
             </button>
