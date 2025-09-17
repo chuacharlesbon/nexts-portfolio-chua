@@ -47,7 +47,7 @@ h1, h2, h3 {
 }
 
 .text-light-beige {
-  color: #a07856;
+  color: #caa07f;
 }
 
 .text-beige {
@@ -59,11 +59,11 @@ h1, h2, h3 {
 }
 
 .bg-beige {
-  background-color: #a07856;
+  background-color: #caa07f;
 }
 
 .hover-bg-beige:hover {
-  background-color: #a07856;
+  background-color: #caa07f;
 }
 
 .hover-bg-beige:hover p {

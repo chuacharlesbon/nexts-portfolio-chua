@@ -6,7 +6,7 @@ import Link from "next/link";
 import { FC } from "react";
 import { useScreenSize } from "@/hooks/useScreenSize";
 
-export const LanguageSwitcher: FC<any> = () => {
+export const LanguageSwitcher: FC<{ isDarkText?: boolean }> = ({ isDarkText }) => {
     const params = useParams();
     const pathname = usePathname();
     const screenSize = useScreenSize();
@@ -21,7 +21,7 @@ export const LanguageSwitcher: FC<any> = () => {
 
     return (
         <Link href={newPath}>
-            <button className="p-2 text-light-beige text-sm flex flex-row items-center justify-center border-beige hover:border-b">
+            <button className={`${isDarkText ? "text-dark-beige" : "text-light-beige"} p-2 text-sm flex flex-row items-center justify-center border-beige hover:border-b`}>
                 <img src={`/logo/${otherLocale}-icon.png`} alt="chibi front" className="h-6 w-6 rounded-full mr-4 border border-stone-300" />
                 <p>{otherLocale === "en" ? "English" : "日本語"}</p>
             </button>

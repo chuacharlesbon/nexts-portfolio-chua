@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/core/navbar";
 import { MetaInfo } from "@/constants/meta_info";
 import { Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/getDictionary";
@@ -12,10 +11,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const currentParams = await params;
     const dict = await getDictionary(currentParams.lang as Locale);
     return {
-        title: `${dict.metaTitle} | Contact Us`,         // localized <title>
+        title: `${dict.metaTitle} | ${dict.contactUs}`,         // localized <title>
         description: `${dict.metaDesc} | Contact Us Page Description`, // localized description
+        keywords: MetaInfo.keywords,
         openGraph: {
-            title: `${dict.metaTitle} | Contact Us`,         // localized <title>
+            title: `${dict.metaTitle} | ${dict.contactUs}`,         // localized <title>
             description: `${dict.metaDesc} | Contact Us Page Description`, // localized description
             images: [
                 {
@@ -30,12 +30,9 @@ export default async function Page({ params }: { params: { lang: Locale } }) {
     const currentParams = await params;
     const dict = await getDictionary(currentParams.lang);
     return (
-        <>
-            <Navbar dict={dict} locale={currentParams.lang} />
-            <div style={{ padding: 24 }}>
-                <p className="title">{dict.welcome}</p>
-                <p>Contact Us</p>
-            </div>
-        </>
+        <div style={{ padding: 24 }}>
+            <p className="title">{dict.welcome}</p>
+            <p>Contact Us</p>
+        </div>
     );
 }
