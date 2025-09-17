@@ -114,6 +114,7 @@ export const ModalMenuRight: FC<ButtonProps> = ({
                                             className={`w-full py-5 underline-offset-8 hover:border-r-4 text-center`}
                                             key={value.name}
                                             href={`/${locale}${value.link}`}
+                                            onClick={onClose}
                                         >
                                             {/* <i className={`${value.icon} w-14 text-2xl`} /> */}
                                             <span className="title text-dark-beige">{dict![value.name]}</span>
