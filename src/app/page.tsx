@@ -1,19 +1,28 @@
-"use client";
 import { MyLoadingAvatarScreen } from "@/components/my_loading_avatar";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { MetaInfo } from "@/constants/meta_info";
+import { Locale } from "@/lib/i18n/config";
+import { getDictionary } from "@/lib/i18n/getDictionary";
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const dict = await getDictionary("ja" as Locale);
+  return {
+    title: dict.metaTitle,         // localized <title>
+    description: dict.metaDesc, // localized description
+    openGraph: {
+      title: dict.metaTitle,         // localized <title>
+      description: dict.metaDesc, // localized description
+      images: [
+        {
+          url: MetaInfo.og.image
+        }
+      ]
+    }
+  };
+}
 
 export default function Home() {
-
-  const router = useRouter();
-  useEffect(() => {
-    setTimeout(() => {
-      router.replace('/ja');
-    }, 1000)
-  }, [])
-  
   return (
-    <MyLoadingAvatarScreen/>
+    <MyLoadingAvatarScreen />
   );
 }

@@ -2,7 +2,6 @@ import { getDictionary } from "@/lib/i18n/getDictionary";
 import { Locale } from "@/lib/i18n/config";
 import { Metadata } from "next";
 import { MetaInfo } from "@/constants/meta_info";
-import { Navbar } from "@/components/core/navbar";
 import { HomeComponent } from "@/components/clientside/home_page";
 
 type Props = {
@@ -31,9 +30,6 @@ export default async function Page({ params }: { params: { lang: Locale } }) {
     const currentParams = await params;
     const dict = await getDictionary(currentParams.lang);
     return (
-        <>
-            <Navbar dict={dict} locale={currentParams.lang} />
-            <HomeComponent dict={dict} locale={currentParams.lang} />
-        </>
+        <HomeComponent dict={dict} locale={currentParams.lang} />
     );
 }
