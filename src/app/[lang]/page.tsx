@@ -14,6 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
         title: dict.metaTitle,         // localized <title>
         description: dict.metaDesc, // localized description
+        keywords: MetaInfo.keywords,
         openGraph: {
             title: dict.metaTitle,         // localized <title>
             description: dict.metaDesc, // localized description

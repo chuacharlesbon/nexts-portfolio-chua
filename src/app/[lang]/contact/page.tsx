@@ -11,10 +11,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const currentParams = await params;
     const dict = await getDictionary(currentParams.lang as Locale);
     return {
-        title: `${dict.metaTitle} | Contact Us`,         // localized <title>
+        title: `${dict.metaTitle} | ${dict.contactUs}`,         // localized <title>
         description: `${dict.metaDesc} | Contact Us Page Description`, // localized description
+        keywords: MetaInfo.keywords,
         openGraph: {
-            title: `${dict.metaTitle} | Contact Us`,         // localized <title>
+            title: `${dict.metaTitle} | ${dict.contactUs}`,         // localized <title>
             description: `${dict.metaDesc} | Contact Us Page Description`, // localized description
             images: [
                 {

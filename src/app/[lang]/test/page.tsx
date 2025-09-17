@@ -13,6 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
         title: `${dict.metaTitle} | Test`,         // localized <title>
         description: `${dict.metaDesc} | Test Page Description`, // localized description
+        keywords: MetaInfo.keywords,
         openGraph: {
             title: `${dict.metaTitle} | Test`,         // localized <title>
             description: `${dict.metaDesc} | Test Page Description`, // localized description
