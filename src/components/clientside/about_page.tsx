@@ -1,5 +1,6 @@
 "use client";
 import { FC } from "react";
+import Image from "next/image";
 import { FlexColumn } from "../core/boxes/FlexColumn";
 import { IntersectionObserverDiv } from "../core/boxes/Div";
 import { ResponsiveLgFlexRow } from "../core/boxes/FlexRow";
@@ -23,7 +24,7 @@ export const AboutComponent: FC<PageProps> = ({ dict, locale }) => {
                     <p className="title text-md text-dark-beige text-center md:text-left">{dict.profession}</p>
                 </div>
                 <div className="p-4" />
-                <img alt="profile" className="rounded-full w-60 h-60 fade-in-right" src={locale === "en" ? "/images/profile_square.png" : "/images/profile_square_cartoon.png"} />
+                <Image alt="profile" className="rounded-full w-60 h-60 fade-in-right" src={locale === "en" ? "/images/profile_square.png" : "/images/profile_square_cartoon.png"} height={500} width={500} />
             </div>
         </section>
 
@@ -43,7 +44,7 @@ export const AboutComponent: FC<PageProps> = ({ dict, locale }) => {
             <FlexColumn className="w-full items-center justify-center">
                 <IntersectionObserverDiv>
                     <ResponsiveLgFlexRow className="w-full items-center justify-center">
-                        <img alt="jlpt" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-left-delayed-300ms shadow-lg" src="/images/prosperna.png" />
+                        <Image alt="jlpt" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-left-delayed-300ms shadow-lg" src="/images/prosperna.png" height={1000} width={500} />
                         <div className="h-2 w-20" />
                         <div className="w-60 md:w-72 xl:w-md fade-in-right-delayed-750ms">
                             <p className="title text-light-beige text-center lg:text-left text-2xl mb-4">{dict.prospernaTitle}</p>
@@ -79,7 +80,7 @@ export const AboutComponent: FC<PageProps> = ({ dict, locale }) => {
                             </Disclosure>
                         </div>
                         <div className="hidden lg:block h-2 w-20" />
-                        <img alt="jlpt" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-right-delayed-300ms shadow-lg" src="/images/xtendly.png" />
+                        <Image alt="jlpt" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-right-delayed-300ms shadow-lg" src="/images/xtendly.png" height={1000} width={500} />
                         <div className="lg:hidden h-2 w-20" />
                         <div className="lg:hidden w-60 md:w-72 xl:w-md fade-in-left-delayed-750ms">
                             <p className="title text-light-beige text-center lg:text-left text-2xl mb-4">{dict.prospernaTitle}</p>
@@ -109,7 +110,7 @@ export const AboutComponent: FC<PageProps> = ({ dict, locale }) => {
             <FlexColumn className="w-full items-center justify-center">
                 <IntersectionObserverDiv>
                     <ResponsiveLgFlexRow className="w-full items-center justify-center">
-                        <img alt="jlpt" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-left-delayed-300ms shadow-lg" src="/images/zuitt_jlpt.png" />
+                        <Image alt="jlpt" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-left-delayed-300ms shadow-lg" src="/images/zuitt_jlpt.png" height={1000} width={500} />
                         <div className="h-2 w-20" />
                         <div className="w-60 md:w-72 xl:w-md fade-in-right-delayed-750ms">
                             <p className="title text-light-beige text-center lg:text-left text-2xl mb-4">{dict.zuittJlptTitle}</p>
@@ -145,7 +146,7 @@ export const AboutComponent: FC<PageProps> = ({ dict, locale }) => {
                             </Disclosure>
                         </div>
                         <div className="hidden lg:block h-2 w-20" />
-                        <img alt="jlpt" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-right-delayed-300ms shadow-lg" src="/images/zuitt.png" />
+                        <Image alt="jlpt" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-right-delayed-300ms shadow-lg" src="/images/zuitt.png" height={1000} width={500} />
                         <div className="lg:hidden h-2 w-20" />
                         <div className="lg:hidden w-60 md:w-72 xl:w-md fade-in-left-delayed-750ms">
                             <p className="title text-light-beige text-center lg:text-left text-2xl mb-4">{dict.zuittBootcampTitle}</p>
@@ -167,7 +168,7 @@ export const AboutComponent: FC<PageProps> = ({ dict, locale }) => {
             <FlexColumn className="w-full items-center justify-center">
                 <IntersectionObserverDiv>
                     <ResponsiveLgFlexRow className="w-full items-center justify-center">
-                        <img alt="jlpt" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-left-delayed-300ms shadow-lg" src="/images/apple.png" />
+                        <Image alt="jlpt" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-left-delayed-300ms shadow-lg" src="/images/apple.png" height={1000} width={500} />
                         <div className="h-2 w-20" />
                         <div className="w-60 md:w-72 xl:w-md fade-in-right-delayed-750ms">
                             <p className="title text-light-beige text-center lg:text-left text-2xl mb-4">{dict.appleTitle}</p>
@@ -194,7 +195,7 @@ export const AboutComponent: FC<PageProps> = ({ dict, locale }) => {
                             <p className="text-light-beige text-center lg:text-left">{dict.educationDesc2}</p>
                         </div>
                         <div className="hidden lg:block h-2 w-20" />
-                        <img alt="zuitt-cert" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-right-delayed-300ms shadow-lg" src="/images/tip.png" />
+                        <Image alt="zuitt-cert" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-right-delayed-300ms shadow-lg" src="/images/tip.png" height={1000} width={500} />
                         <div className="lg:hidden h-2 w-20" />
                         <div className="lg:hidden w-60 md:w-72 xl:w-md fade-in-left-delayed-750ms">
                             <p className="title text-light-beige text-center lg:text-left text-2xl mb-4">{dict.educationTitle}</p>

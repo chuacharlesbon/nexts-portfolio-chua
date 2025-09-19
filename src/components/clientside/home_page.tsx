@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { FC, useState } from "react";
 import { LuMessageCircleMore } from "react-icons/lu";
 import { ResponsiveLgFlexRow } from "../core/boxes/FlexRow";
@@ -32,7 +33,7 @@ export const HomeComponent: FC<PageProps> = ({ dict, locale }) => {
                     <button className="hidden" onClick={() => setShowMessage(prev => !prev)}>
                         <LuMessageCircleMore className="absolute top-0 right-0 text-4xl text-stone-900 shake-icon" />
                     </button>
-                    <img alt="profile" className="h-96 w-60 object-cover object-center fade-in-left-delayed-300ms" src="/images/avatar_cartoon.png" />
+                    <Image alt="profile" className="h-96 w-60 object-cover object-center fade-in-left-delayed-300ms" src="/images/avatar_cartoon.png" height={1000} width={500} />
                 </div>
                 <p className="title w-60 md:w-96 text-lg lg:text-2xl text-dark-beige text-center lg:text-left fade-in-delayed-750ms">{dict.profession}</p>
                 <p className="lg:hidden title w-60 md:w-96 text-lg lg:text-2xl text-dark-beige text-center lg:text-right fade-in-delayed-1250ms">{dict.name}</p>
@@ -47,7 +48,7 @@ export const HomeComponent: FC<PageProps> = ({ dict, locale }) => {
             <FlexColumn className="w-full items-center justify-center">
                 <IntersectionObserverDiv>
                     <ResponsiveLgFlexRow className="w-full items-center justify-center">
-                        <img alt="jlpt" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-left-delayed-300ms shadow-lg" src="/images/jlpt.png" />
+                        <Image alt="jlpt" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-left-delayed-300ms shadow-lg" src="/images/jlpt.png" height={1000} width={500} />
                         <div className="h-2 w-20" />
                         <div className="w-60 md:w-72 xl:w-md fade-in-right-delayed-750ms">
                             <p className="title text-light-beige text-center lg:text-left text-2xl mb-4">{dict.jlptTitle}</p>
@@ -72,7 +73,7 @@ export const HomeComponent: FC<PageProps> = ({ dict, locale }) => {
                             <p className="text-light-beige text-center lg:text-left">{dict.zuittDesc}</p>
                         </div>
                         <div className="hidden lg:block h-2 w-20" />
-                        <img alt="zuitt-cert" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-right-delayed-300ms shadow-lg" src="/images/docs/zuitt-fullstack-cert.jpeg" />
+                        <Image alt="zuitt-cert" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-right-delayed-300ms shadow-lg" src="/images/docs/zuitt-fullstack-cert.jpeg" height={1000} width={500} />
                         <div className="lg:hidden h-2 w-20" />
                         <div className="lg:hidden w-60 md:w-72 xl:w-md fade-in-left-delayed-750ms">
                             <p className="title text-light-beige text-center lg:text-left text-2xl mb-4">{dict.zuittTitle}</p>
@@ -93,7 +94,7 @@ export const HomeComponent: FC<PageProps> = ({ dict, locale }) => {
             <FlexColumn className="w-full items-center justify-center">
                 <IntersectionObserverDiv>
                     <ResponsiveLgFlexRow className="w-full items-center justify-center">
-                        <img alt="booking-app" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-left-delayed-300ms shadow-lg" src="/images/wyn_logo.png" />
+                        <Image alt="booking-app" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-left-delayed-300ms shadow-lg" src="/images/wyn_logo.png" height={1000} width={500} />
                         <div className="h-2 w-20" />
                         <div className="w-60 md:w-72 xl:w-md fade-in-right-delayed-750ms">
                             <p className="title text-light-beige text-center lg:text-left text-2xl mb-4">{dict.bookingAppTitle}</p>
@@ -112,7 +113,7 @@ export const HomeComponent: FC<PageProps> = ({ dict, locale }) => {
                             <p className="text-light-beige text-center lg:text-left">{dict.reportAppDesc}</p>
                         </div>
                         <div className="hidden lg:block h-2 w-20" />
-                        <img alt="ereport-app" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-right-delayed-300ms shadow-lg" src="/images/ereport_app_logo.png" />
+                        <Image alt="ereport-app" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-right-delayed-300ms shadow-lg" src="/images/ereport_app_logo.png" height={1000} width={500} />
                         <div className="lg:hidden h-2 w-20" />
                         <div className="lg:hidden w-60 md:w-72 xl:w-md fade-in-left-delayed-750ms">
                             <p className="title text-light-beige text-center lg:text-left text-2xl mb-4">{dict.reportAppTitle}</p>

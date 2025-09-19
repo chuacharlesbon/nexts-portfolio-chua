@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/getDictionary";
 import { FC } from "react"
@@ -6,8 +7,8 @@ import { ImSpinner3 } from "react-icons/im"
 export const MyLoadingAvatar: FC = () => {
     return (
         <div className="chibi-spin mx-auto">
-            <img src="/images/avatar_front_white.png" alt="chibi front" className="front" />
-            <img src="/images/avatar_back_white.png" alt="chibi back" className="back" />
+            <Image src="/images/avatar_front_white.png" alt="chibi front" className="front" />
+            <Image src="/images/avatar_back_white.png" alt="chibi back" className="back" />
         </div>
     )
 }
