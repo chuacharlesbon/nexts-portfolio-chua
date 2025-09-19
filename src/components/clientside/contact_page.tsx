@@ -60,7 +60,7 @@ export const ContactComponent: FC<PageProps> = () => {
                 setLoading(false);
                 setIsModalOpen(true);
 
-                if (!data.message.toString().toLowercase().includes("err")) {
+                if (!data.message.toString().toLowerCase().includes("err")) {
                     setName("");
                     setEmail("");
                     setMessage("");
