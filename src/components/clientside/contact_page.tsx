@@ -53,8 +53,12 @@ export const ContactComponent: FC<PageProps> = () => {
                 console.log(res);
             } catch (e) {
                 console.log(e);
-                setLoading(false);
             }
+            
+            setLoading(false);
+            setName("");
+            setEmail("");
+            setMessage("");
         }
     };
 
@@ -63,7 +67,7 @@ export const ContactComponent: FC<PageProps> = () => {
             <input className="col-span-4 lg:col-span-2 bg-white px-4 py-2 rounded-md text-stone-900 border border-stone-300" name="name" placeholder={t('nameForm')} type="name" value={fullName} onChange={handleChangeName} />
             <input className="col-span-4 lg:col-span-2 bg-white px-4 py-2 rounded-md text-stone-900 border border-stone-300" name="email" placeholder={t('emailForm')} type="email" value={email} onChange={handleChangeEmail} />
             <textarea className="col-span-4 bg-white px-4 py-2 rounded-md text-stone-900 border border-stone-300" name="message" placeholder={t('messageForm')} rows={4} value={message} onChange={handleChangeMsg} />
-            <button className="col-span-4 flex flex-row justify-center items-center bg-stone-900 text-white uppercase font-semibold py-2 rounded-md" disabled={loading} type="submit">
+            <button className="col-span-4 flex flex-row justify-center items-center bg-stone-900 text-white uppercase font-semibold py-2 rounded-md" disabled={loading || !captchaToken} type="submit">
                 {
                     loading
                         ? <FaSpinner className="text-xl mr-4 animate-spin" />
