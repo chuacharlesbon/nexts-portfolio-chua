@@ -1,3 +1,4 @@
+import { ContactComponent } from "@/components/clientside/contact_page";
 import { MetaInfo } from "@/constants/meta_info";
 import { Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/getDictionary";
@@ -30,9 +31,6 @@ export default async function Page({ params }: { params: { lang: Locale } }) {
     const currentParams = await params;
     const dict = await getDictionary(currentParams.lang);
     return (
-        <div style={{ padding: 24 }}>
-            <p className="title">{dict.welcome}</p>
-            <p>Contact Us</p>
-        </div>
+        <ContactComponent dict={dict} locale={currentParams.lang} />
     );
 }

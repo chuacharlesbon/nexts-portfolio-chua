@@ -49,5 +49,9 @@
     "educationSection": "Education",
     "educationTitle": "Technological Institute of the Philippines",
     "educationDesc": "BS Civil Engineering",
-    "educationDesc2": "2013 - 2019"
+    "educationDesc2": "2013 - 2019",
+    "nameForm": "名前",
+    "emailForm": "Eメールアドレス",
+    "messageForm": "メッセージ",
+    "sendForm": "送信"
 }
