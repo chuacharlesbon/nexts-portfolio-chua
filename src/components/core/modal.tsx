@@ -1,6 +1,6 @@
 "use client";
 
-import { Dialog, Transition } from "@headlessui/react";
+import { Dialog, DialogPanel, DialogTitle, Transition } from "@headlessui/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FC, Fragment } from "react";
@@ -14,9 +14,16 @@ interface ButtonProps {
     className?: string;
     onClose: any;
     isOpen: boolean;
-    menu: any;
+    menu?: any;
     dict?: Record<string, string>;
     locale?: string;
+}
+
+interface ModalTopProps {
+    onClose: any;
+    isOpen: boolean;
+    title: string;
+    desc: string;
 }
 
 export const ModalMenuLeft: FC<ButtonProps> = ({
@@ -131,3 +138,65 @@ export const ModalMenuRight: FC<ButtonProps> = ({
         </Transition>
     );
 };
+
+export const ModalTop: FC<ModalTopProps> = ({
+    onClose, isOpen, title, desc
+}) => {
+
+    return (
+        <Transition show={isOpen} as={Fragment}>
+            <Dialog
+                as="div"
+                className="relative z-50 focus:outline-none"
+                onClose={onClose}
+            >
+                {/* Background overlay */}
+                <Transition.Child
+                    as={Fragment}
+                    enter="ease-out duration-300"
+                    enterFrom="opacity-0"
+                    enterTo="opacity-100"
+                    leave="ease-in duration-200"
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0"
+                >
+                    <div className="fixed inset-0 bg-black/30" />
+                </Transition.Child>
+
+                <div className="fixed inset-0 z-50 w-screen overflow-y-auto">
+                    <div className="flex min-h-full items-start justify-center p-4">
+                        {/* Panel transition */}
+                        <Transition.Child
+                            as={Fragment}
+                            enter="ease-out duration-300"
+                            enterFrom="-translate-y-10 opacity-0"
+                            enterTo="translate-y-0 opacity-100"
+                            leave="ease-in duration-200"
+                            leaveFrom="translate-y-0 opacity-100"
+                            leaveTo="-translate-y-10 opacity-0"
+                        >
+                            <DialogPanel className="w-full max-w-md rounded-xl bg-white p-6 backdrop-blur-2xl shadow-lg">
+                                <DialogTitle
+                                    className="title text-stone-900"
+                                >
+                                    {title}
+                                </DialogTitle>
+                                <p className="mt-2 text-sm/6 text-stone-900">
+                                    {desc}
+                                </p>
+                                <div className="mt-4 hidden">
+                                    <button
+                                        className="inline-flex items-center gap-2 rounded-md bg-gray-700 px-3 py-1.5 text-sm font-semibold text-stone-900 shadow-inner shadow-white/10 hover:bg-gray-600 focus:outline-none"
+                                        onClick={onClose}
+                                    >
+                                        CLICK
+                                    </button>
+                                </div>
+                            </DialogPanel>
+                        </Transition.Child>
+                    </div>
+                </div>
+            </Dialog>
+        </Transition>
+    )
+}

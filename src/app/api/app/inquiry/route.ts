@@ -5,9 +5,6 @@ export async function POST(
     req: Request,
 ) {
     try {
-        // Connect to MongoDB
-        await dbConnect();
-
         const body = await req.json();
         const { name, email, message } = body;
 
@@ -17,6 +14,9 @@ export async function POST(
                 headers: { 'Content-Type': 'application/json' },
             });
         } else {
+            // Connect to MongoDB
+            await dbConnect();
+
             /* find all the data in our database */
             const result = await Inquiry.create({
                 name: name,

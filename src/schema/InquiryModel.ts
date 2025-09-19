@@ -29,4 +29,4 @@ const InquirySchema = new mongoose.Schema<Inquiry>({
 // This adds `createdAt` and `updatedAt`
 InquirySchema.set("timestamps", true);
 
-export default mongoose.models.Pet || mongoose.model<Inquiry>("Inquiry", InquirySchema);
+export default mongoose.models.Inquiry || mongoose.model<Inquiry>("Inquiry", InquirySchema);
