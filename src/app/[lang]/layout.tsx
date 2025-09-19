@@ -1,3 +1,4 @@
+import { Footer } from "@/components/core/footer";
 import { Navbar } from "@/components/core/navbar";
 import { I18nProvider } from "@/components/I18nProvider";
 import { i18nConfig, Locale } from "@/lib/i18n/config";
@@ -25,6 +26,7 @@ export default async function LanguageRootLayout({
             >
                 <Navbar dict={dict} locale={lang} />
                 {children}
+                <Footer />
             </I18nProvider>
         </main>
     );
