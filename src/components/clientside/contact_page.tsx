@@ -121,7 +121,7 @@ export const ContactComponent: FC<PageProps> = ({ dict }) => {
         <section className="w-full flex flex-col lg:flex-row items-center justify-around bg-beige px-4 pt-10 pb-20">
             {
                 contactCardList.map((item: any) => (
-                    <ContactCard dict={dict} item={item} />
+                    <ContactCard dict={dict} item={item} key={item.title} />
                 ))
             }
         </section>
