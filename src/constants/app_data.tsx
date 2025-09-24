@@ -1,3 +1,7 @@
+import { FaLinkedinIn } from "react-icons/fa";
+import { MdCall } from "react-icons/md";
+import { SiGmail } from "react-icons/si";
+
 export const jlptCarousel = [
     {
         original: "/images/jlpt_result.png",
@@ -131,5 +135,26 @@ export const appleImages = [
     {
         original: "/images/xcode.png",
         thumbnail: "/images/xcode.png",
+    },
+]
+
+export const contactCardList = [
+    {
+        icon: <SiGmail className="col-span-12 md:col-span-2 text-dark-beige" />,
+        title: "emailForm",
+        value: "chuacharlesbon@gmail.com",
+        link: "mailto:charlessbonnchua@gmail.com?cc=chuacharlesbon@gmail.com&subject=Client%20Inquiry",
+    },
+    {
+        icon: <MdCall className="col-span-12 md:col-span-2 text-dark-beige" />,
+        title: "makePhoneCall",
+        value: "+63 912 8744 545",
+        link: "tel:+639128744545",
+    },
+    {
+        icon: <FaLinkedinIn className="col-span-12 md:col-span-2 text-dark-beige" />,
+        title: "letsConnect",
+        value: "LinkedIn",
+        link: "https://www.linkedin.com/in/charles-bon-chua-12116122a/",
     },
 ]

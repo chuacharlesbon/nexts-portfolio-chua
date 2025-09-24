@@ -53,5 +53,10 @@
     "nameForm": "Name",
     "emailForm": "Email",
     "messageForm": "Message",
-    "sendForm": "Send"
+    "sendForm": "Send",
+    "contactTitle": "Send a Message",
+    "contactEmail": "Send an email >>",
+    "makePhoneCall": "Make a phone call",
+    "letsConnect": "Let's connect",
+    "contactTagline": "We value connections"
 }

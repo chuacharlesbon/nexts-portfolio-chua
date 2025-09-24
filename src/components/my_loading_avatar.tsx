@@ -7,8 +7,8 @@ import { ImSpinner3 } from "react-icons/im"
 export const MyLoadingAvatar: FC = () => {
     return (
         <div className="chibi-spin mx-auto">
-            <Image src="/images/avatar_front_white.png" alt="chibi front" className="front" />
-            <Image src="/images/avatar_back_white.png" alt="chibi back" className="back" />
+            <Image src="/images/avatar_front_white.png" alt="chibi front" className="front" height={200} width={200} />
+            <Image src="/images/avatar_back_white.png" alt="chibi back" className="back" height={200} width={200} />
         </div>
     )
 }

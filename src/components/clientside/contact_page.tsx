@@ -1,18 +1,20 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { ChangeEvent, FC, FormEvent, useState } from "react";
-import { useTranslation } from "react-i18next";
 import ReCAPTCHA from "react-google-recaptcha";
 import { IoIosSend } from "react-icons/io";
 import { FaSpinner } from "react-icons/fa";
 import { ModalTop } from "../core/modal";
+import Link from "next/link";
+import { contactCardList } from "@/constants/app_data";
+import { ContactCard } from "../core/cards";
 
 interface PageProps {
     dict: Record<string, string>;
     locale: string;
 }
 
-export const ContactComponent: FC<PageProps> = () => {
-    const { t } = useTranslation();
+export const ContactComponent: FC<PageProps> = ({ dict }) => {
     const [fullName, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -75,33 +77,53 @@ export const ContactComponent: FC<PageProps> = () => {
         }
     };
 
-    return <div className="bg-beige w-full min-h-screen mt-20 mx-0 flex flex-col justify-center items-center p-4">
+    return <div className="bg-stone-950 w-full min-h-screen mt-20 mx-0 flex flex-col justify-center items-center">
         <ModalTop
             onClose={() => setIsModalOpen(false)}
             isOpen={isModalOpen}
             title="INFO"
             desc={modalDesc}
         />
-        <form className="bg-[rgba(255,255,255,0.5)] shadow-md p-4 rounded-md grid grid-cols-4 gap-y-2 gap-x-4 w-full md:w-3/5 lg:w-1/2" onSubmit={handleSubmit}>
-            <input className="col-span-4 lg:col-span-2 bg-white px-4 py-2 rounded-md text-stone-900 border border-stone-300" name="name" placeholder={t('nameForm')} type="name" value={fullName} onChange={handleChangeName} />
-            <input className="col-span-4 lg:col-span-2 bg-white px-4 py-2 rounded-md text-stone-900 border border-stone-300" name="email" placeholder={t('emailForm')} type="email" value={email} onChange={handleChangeEmail} />
-            <textarea className="col-span-4 bg-white px-4 py-2 rounded-md text-stone-900 border border-stone-300" name="message" placeholder={t('messageForm')} rows={4} value={message} onChange={handleChangeMsg} />
-            <button className="title col-span-4 flex flex-row justify-center items-center bg-stone-900 text-white uppercase font-semibold py-2 rounded-md" disabled={loading || !captchaToken} type="submit">
-                {
-                    loading
-                        ? <FaSpinner className="text-xl mr-2 animate-spin" />
-                        : <IoIosSend className="text-xl mr-2" />
-                }
-                {t('sendForm')}
-            </button>
 
-            {/* reCAPTCHA */}
-            <div className="col-span-4 flex flex-row justify-center items-center">
-                <ReCAPTCHA
-                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? "N/A"}
-                    onChange={setCaptchaToken}
-                />
+        {/* CONTACT FORM SECTION */}
+        <section className="w-full p-4 min-h-screen flex flex-col items-center justify-center">
+            <div className="w-full md:w-3/5 lg:w-1/2 mx-auto">
+                <p className="title text-light-beige lg:text-left text-2xl mb-4">{dict.contactTitle}</p>
             </div>
-        </form>
+            <form className="bg-[rgba(255,255,255,0.2)] shadow-md p-4 rounded-md grid grid-cols-4 gap-y-2 gap-x-4 w-full md:w-3/5 lg:w-1/2 mx-auto" onSubmit={handleSubmit}>
+                <input className="col-span-4 lg:col-span-2 bg-white px-4 py-2 rounded-md text-stone-900 border border-stone-300" name="name" placeholder={dict.nameForm} type="name" value={fullName} onChange={handleChangeName} />
+                <input className="col-span-4 lg:col-span-2 bg-white px-4 py-2 rounded-md text-stone-900 border border-stone-300" name="email" placeholder={dict.emailForm} type="email" value={email} onChange={handleChangeEmail} />
+                <textarea className="col-span-4 bg-white px-4 py-2 rounded-md text-stone-900 border border-stone-300" name="message" placeholder={dict.messageForm} rows={4} value={message} onChange={handleChangeMsg} />
+                <button className="title col-span-4 flex flex-row justify-center items-center bg-stone-900 text-light-beige uppercase font-semibold py-2 rounded-md" disabled={loading || !captchaToken} type="submit">
+                    {
+                        loading
+                            ? <FaSpinner className="text-xl mr-2 animate-spin" />
+                            : <IoIosSend className="text-xl mr-2" />
+                    }
+                    {dict.sendForm}
+                </button>
+                <Link className="col-span-4 title text-light-beige hover:underline" href="mailto:charlessbonnchua@gmail.com?cc=chuacharlesbon@gmail.com&subject=Client%20Inquiry" >{dict.contactEmail}</Link>
+
+                {/* reCAPTCHA */}
+                <div className="col-span-4 flex flex-row justify-center items-center">
+                    <ReCAPTCHA
+                        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? "N/A"}
+                        onChange={setCaptchaToken}
+                    />
+                </div>
+            </form>
+        </section>
+
+        {/* CONTACT FORM SECTION */}
+        <div className="w-full bg-beige px-4 pt-20 pb-10">
+            <p className="title text-dark-beige text-center text-2xl">{dict.contactTagline}</p>
+        </div>
+        <section className="w-full flex flex-col lg:flex-row items-center justify-around bg-beige px-4 pt-10 pb-20">
+            {
+                contactCardList.map((item: any) => (
+                    <ContactCard dict={dict} item={item} />
+                ))
+            }
+        </section>
     </div>
 }

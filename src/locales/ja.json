@@ -53,5 +53,10 @@
     "nameForm": "名前",
     "emailForm": "Eメールアドレス",
     "messageForm": "メッセージ",
-    "sendForm": "送信"
+    "sendForm": "送信",
+    "contactTitle": "メッセージ　を　おくる",
+    "contactEmail": "Eメール　を　おくる >>",
+    "makePhoneCall": "でんわ　を　かける",
+    "letsConnect": "つながるましょう",
+    "contactTagline": "つながり を たいせつに しています"
 }
