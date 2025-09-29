@@ -83,7 +83,7 @@ export const AboutComponent: FC<PageProps> = ({ dict, locale }) => {
                         <Image alt="jlpt" className="object-contain my-4 w-60 xl:w-md rounded-md fade-in-right-delayed-300ms shadow-lg" src="/images/xtendly.png" height={1000} width={500} />
                         <div className="lg:hidden h-2 w-20" />
                         <div className="lg:hidden w-60 md:w-72 xl:w-md fade-in-left-delayed-750ms">
-                            <p className="title text-light-beige text-center lg:text-left text-2xl mb-4">{dict.prospernaTitle}</p>
+                            <p className="title text-light-beige text-center lg:text-left text-2xl mb-4">{dict.xtendlyTitle}</p>
                             <p className="text-light-beige text-center lg:text-left mb-4">May 2022 - December 2023</p>
                             <p className="text-light-beige text-center lg:text-left">{dict.xtendlyDesc}</p>
                             <Disclosure>
